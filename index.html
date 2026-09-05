@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoYoGu - Fresh, Healthy & Glowing | Homemade Yogurt</title>
+    <meta name="description" content="MoYoGu - Homemade Yogurt. Fresh, Healthy & Glowing!">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #C2185B;
+            --primary-light: #FCE4EC;
+            --secondary: #4CAF50;
+            --secondary-light: #E8F5E9;
+            --dark: #2D3748;
+            --light: #FFF8FA;
+            --white: #FFFFFF;
+            --shadow: 0 10px 25px -5px rgba(194, 24, 91, 0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Quicksand', sans-serif;
+            color: var(--dark);
+            background-color: var(--light);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, .brand {
+            font-family: 'Fredoka', sans-serif;
+        }
+
+        /* Header / Navbar */
+        header {
+            background: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .logo span {
+            color: var(--secondary);
+        }
+
+        .btn-wa-nav {
+            background-color: #25D366;
+            color: var(--white);
+            padding: 0.6rem 1.2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+        }
+
+        .btn-wa-nav:hover {
+            background-color: #128C7E;
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section */
+        .hero {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 4rem 1.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .tagline-badge {
+            background: var(--secondary-light);
+            color: var(--secondary);
+            padding: 0.5rem 1.2rem;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+            letter-spacing: 1px;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            color: var(--primary);
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 650px;
+            color: #555;
+            margin-bottom: 2rem;
+        }
+
+        .cta-btn {
+            background: linear-gradient(135deg, var(--primary), #E91E63);
+            color: var(--white);
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-decoration: none;
+            box-shadow: var(--shadow);
+            transition: all 0.3s;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px -5px rgba(194, 24, 91, 0.25);
+        }
+
+        /* Features Section */
+        .features {
+            background: var(--white);
+            padding: 4rem 1.5rem;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            color: var(--primary);
+            margin-bottom: 3rem;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background: var(--light);
+            padding: 2rem;
+            border-radius: 20px;
+            text-align: center;
+            border: 1px solid #F48FB1;
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-card h3 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Pricing Section */
+        .pricing {
+            padding: 4rem 1.5rem;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .price-card {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 2rem 1.5rem;
+            text-align: center;
+            box-shadow: var(--shadow);
+            position: relative;
+            border: 2px solid transparent;
+        }
+
+        .price-card.popular {
+            border-color: var(--primary);
+        }
+
+        .popular-badge {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--primary);
+            color: var(--white);
+            padding: 0.2rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 700;
+        }
+
+        .size-title {
+            font-size: 1.4rem;
+            color: var(--dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .price {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .price-desc {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Storage Guidelines */
+        .guidelines {
+            background: var(--secondary-light);
+            padding: 3rem 1.5rem;
+            border-radius: 20px;
+            margin: 3rem auto;
+            max-width: 900px;
+            border: 2px stroke var(--secondary);
+        }
+
+        .guidelines h3 {
+            color: #1B5E20;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .guidelines ul {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .guidelines li {
+            background: var(--white);
+            padding: 1rem;
+            border-radius: 12px;
+            font-weight: 600;
+            color: #2E7D32;
+            text-align: center;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--white);
+            border-top: 1px solid #E0E0E0;
+            text-align: center;
+            padding: 2rem 1.5rem;
+            margin-top: 4rem;
+            font-size: 0.9rem;
+            color: #777;
+        }
+
+        footer a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo">MoYoGu<span>.id</span></a>
+            <a href="https://wa.me/6281234567890?text=Halo%20MoYoGu,%20saya%20mau%20order%20Yogurt%20Drink" class="btn-wa-nav" target="_blank">Pesan WA</a>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="tagline-badge">FRESH, HEALTHY, & GLOWING</div>
+        <h1>Homemade Fruit Yogurt Drink<br>100% Alami & Bebas Gula Pasir</h1>
+        <p>Nikmati kesegaran racikan yogurt dari susu sapi murni dan potongan buah asli dengan pemanis alami daun Stevia. Aman untuk diet & jaga gula darah!</p>
+        <a href="https://wa.me/6281234567890?text=Halo%20MoYoGu,%20saya%20mau%20order%20Yogurt%20Drink" class="cta-btn" target="_blank">💬 Pesan Pre-Order Sekarang</a>
+    </section>
+
+    <!-- Features -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Mengapa Memilih MoYoGu?</h2>
+            <div class="grid-3">
+                <div class="feature-card">
+                    <div class="feature-icon">🥛</div>
+                    <h3>Susu Sapi Murni</h3>
+                    <p>Dibuat higienis dari susu segar alami tanpa pengawet atau campuran bahan kimia.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🍓</div>
+                    <h3>100% Buah Asli</h3>
+                    <p>Sensasi rasa dari potongan buah segar pilihan: Strawberry, Buah Naga, & Blueberry.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🍃</div>
+                    <h3>0% Gula Pasir</h3>
+                    <p>Menggunakan 100% pemanis alami daun Stevia. Aman untuk gula darah dan diet sehat.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="pricing">
+        <div class="container">
+            <h2 class="section-title">Pilihan Ukuran & Harga</h2>
+            <div class="pricing-grid">
+                <div class="price-card">
+                    <div class="size-title">150 ml</div>
+                    <div class="price">Rp15.000</div>
+                    <p class="price-desc">Small Size<br>Porsi pas untuk anak.</p>
+                </div>
+                <div class="price-card popular">
+                    <div class="popular-badge">BEST SELLER</div>
+                    <div class="size-title">250 ml</div>
+                    <div class="price">Rp20.000</div>
+                    <p class="price-desc">Regular Size<br>Porsi pas segarnya favorit harian.</p>
+                </div>
+                <div class="price-card">
+                    <div class="size-title">350 ml</div>
+                    <div class="price">Rp25.000</div>
+                    <p class="price-desc">Large Size<br>Porsi ekstra puas untuk teman kerja.</p>
+                </div>
+                <div class="price-card">
+                    <div class="size-title">500 ml</div>
+                    <div class="price">Rp30.000</div>
+                    <p class="price-desc">Family Size<br>Porsi hemat stok kulkas keluarga.</p>
+                </div>
+            </div>
+
+            <!-- Storage Guidelines Box -->
+            <div class="guidelines">
+                <h3>Petunjuk Konsumsi & Penyimpanan</h3>
+                <ul>
+                    <li>🥤 Kocok Sebelum Dikonsumsi</li>
+                    <li>🧊 Nikmati Dalam Keadaan Dingin</li>
+                    <li>⏱️ Max 2 Jam Suhu Ruang</li>
+                    <li>❄️ Max 5 Hari di Chiller</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 <strong>MoYoGu Indonesia</strong>. All Rights Reserved.</p>
+        <p>Official Domain: <a href="https://moyogu.id">moyogu.id</a> | Instagram: <a href="https://instagram.com/moyogu.official" target="_blank">@moyogu.official</a></p>
+    </footer>
+
+</body>
+</html>
