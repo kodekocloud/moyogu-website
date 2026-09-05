@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MoYoGu - Fresh, Healthy & Glowing | Homemade Yogurt</title>
-    <meta name="description" content="MoYoGu - Homemade Yogurt. Fresh, Healthy & Glowing!">
+    <title>MoYoGu - Fresh, Healthy, & Glowing | Homemade Fruit Yogurt Drink</title>
+    <meta name="description" content="MoYoGu - Homemade Fruit Yogurt Drink 100% alami dari susu murni, buah segar, dan pemanis alami Stevia (0% Gula Pasir). Open PO setiap hari H-1 di Bojonggede, Bogor.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
@@ -37,7 +37,6 @@
             font-family: 'Fredoka', sans-serif;
         }
 
-        /* Header / Navbar */
         header {
             background: var(--white);
             box-shadow: 0 2px 10px rgba(0,0,0,0.05);
@@ -82,14 +81,12 @@
 
         .btn-wa-nav:hover {
             background-color: #128C7E;
-            transform: translateY(-2px);
         }
 
-        /* Hero Section */
         .hero {
             max-width: 1100px;
             margin: 0 auto;
-            padding: 4rem 1.5rem;
+            padding: 3.5rem 1.5rem;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -108,23 +105,34 @@
         }
 
         .hero h1 {
-            font-size: 2.8rem;
+            font-size: 2.6rem;
             color: var(--primary);
             line-height: 1.2;
             margin-bottom: 1rem;
         }
 
         .hero p {
-            font-size: 1.2rem;
+            font-size: 1.15rem;
             max-width: 650px;
             color: #555;
+            margin-bottom: 1.8rem;
+        }
+
+        .po-notice {
+            background: #FFF3E0;
+            color: #E65100;
+            border: 1px dashed #FFB74D;
+            padding: 0.8rem 1.5rem;
+            border-radius: 12px;
+            font-weight: 700;
             margin-bottom: 2rem;
+            display: inline-block;
         }
 
         .cta-btn {
             background: linear-gradient(135deg, var(--primary), #E91E63);
             color: var(--white);
-            padding: 1rem 2.5rem;
+            padding: 1rem 2.2rem;
             border-radius: 50px;
             font-size: 1.1rem;
             font-weight: 700;
@@ -134,11 +142,9 @@
         }
 
         .cta-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 30px -5px rgba(194, 24, 91, 0.25);
+            transform: translateY(-2px);
         }
 
-        /* Features Section */
         .features {
             background: var(--white);
             padding: 4rem 1.5rem;
@@ -153,7 +159,7 @@
             text-align: center;
             font-size: 2.2rem;
             color: var(--primary);
-            margin-bottom: 3rem;
+            margin-bottom: 2.5rem;
         }
 
         .grid-3 {
@@ -180,7 +186,6 @@
             margin-bottom: 0.5rem;
         }
 
-        /* Pricing Section */
         .pricing {
             padding: 4rem 1.5rem;
         }
@@ -234,17 +239,15 @@
         .price-desc {
             font-size: 0.9rem;
             color: #666;
-            margin-bottom: 1.5rem;
         }
 
-        /* Storage Guidelines */
         .guidelines {
             background: var(--secondary-light);
-            padding: 3rem 1.5rem;
+            padding: 2.5rem 1.5rem;
             border-radius: 20px;
             margin: 3rem auto;
             max-width: 900px;
-            border: 2px stroke var(--secondary);
+            border: 1px solid var(--secondary);
         }
 
         .guidelines h3 {
@@ -262,14 +265,59 @@
 
         .guidelines li {
             background: var(--white);
-            padding: 1rem;
+            padding: 0.8rem;
             border-radius: 12px;
             font-weight: 600;
             color: #2E7D32;
             text-align: center;
         }
 
-        /* Footer */
+        .partnership {
+            background: var(--white);
+            padding: 3.5rem 1.5rem;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .partnership h3 {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .partnership p {
+            max-width: 700px;
+            margin: 0 auto 1.5rem auto;
+            color: #555;
+        }
+
+        .btn-partner {
+            background: var(--secondary);
+            color: var(--white);
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .location-box {
+            margin-top: 3rem;
+            text-align: center;
+            background: var(--light);
+            padding: 2rem;
+            border-radius: 20px;
+            border: 1px dashed var(--primary);
+        }
+
+        .location-box h4 {
+            font-size: 1.3rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
         footer {
             background: var(--white);
             border-top: 1px solid #E0E0E0;
@@ -289,23 +337,25 @@
 </head>
 <body>
 
-    <!-- Header -->
     <header>
         <div class="nav-container">
             <a href="#" class="logo">MoYoGu<span>.id</span></a>
-            <a href="https://wa.me/6282211681167?text=Halo%20MoYoGu,%20saya%20mau%20order%20Yogurt%20Drink" class="btn-wa-nav" target="_blank">Pesan WA</a>
+            <a href="https://wa.me/6282211681167?text=Halo%20Admin%20MoYoGu,%20saya%20mau%20order%20Yogurt" class="btn-wa-nav" target="_blank">Pesan WA</a>
         </div>
     </header>
 
-    <!-- Hero -->
     <section class="hero">
         <div class="tagline-badge">FRESH, HEALTHY, & GLOWING</div>
         <h1>Homemade Fruit Yogurt Drink<br>100% Alami & Bebas Gula Pasir</h1>
-        <p>Nikmati kesegaran racikan yogurt dari susu sapi murni dan potongan buah asli dengan pemanis alami daun Stevia. Aman untuk diet & jaga gula darah!</p>
-        <a href="https://wa.me/6282211681167?text=Halo%20MoYoGu,%20saya%20mau%20order%20Yogurt%20Drink" class="cta-btn" target="_blank">💬 Pesan Pre-Order Sekarang</a>
+        <p>Nikmati racikan yogurt segar dari susu sapi murni dan potongan buah asli dengan pemanis alami daun Stevia. Aman untuk diet & menjaga gula darah!</p>
+        
+        <div class="po-notice">
+            📢 Open Pre-Order Setiap Hari (H-1) | Freshly Made Order!
+        </div>
+
+        <a href="https://wa.me/6282211681167?text=Halo%20Admin%20MoYoGu,%20saya%20mau%20order%20PO%20Yogurt" class="cta-btn" target="_blank">💬 Pesan Pre-Order via WhatsApp</a>
     </section>
 
-    <!-- Features -->
     <section class="features">
         <div class="container">
             <h2 class="section-title">Mengapa Memilih MoYoGu?</h2>
@@ -316,20 +366,19 @@
                     <p>Dibuat higienis dari susu segar alami tanpa pengawet atau campuran bahan kimia.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">🍓</div>
-                    <h3>100% Buah Asli</h3>
-                    <p>Sensasi rasa dari potongan buah segar pilihan: Strawberry, Buah Naga, & Blueberry.</p>
-                </div>
-                <div class="feature-card">
                     <div class="feature-icon">🍃</div>
                     <h3>0% Gula Pasir</h3>
                     <p>Menggunakan 100% pemanis alami daun Stevia. Aman untuk gula darah dan diet sehat.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🍓</div>
+                    <h3>100% Buah Asli</h3>
+                    <p>Sensasi rasa dari potongan buah segar pilihan: Strawberry, Buah Naga, dan Plain Original.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Pricing -->
     <section class="pricing">
         <div class="container">
             <h2 class="section-title">Pilihan Ukuran & Harga</h2>
@@ -337,7 +386,7 @@
                 <div class="price-card">
                     <div class="size-title">150 ml</div>
                     <div class="price">Rp15.000</div>
-                    <p class="price-desc">Small Size<br>Porsi pas untuk anak.</p>
+                    <p class="price-desc">Personal / Kids Size<br>Pas buat bekal sekolah anak.</p>
                 </div>
                 <div class="price-card popular">
                     <div class="popular-badge">BEST SELLER</div>
@@ -348,18 +397,17 @@
                 <div class="price-card">
                     <div class="size-title">350 ml</div>
                     <div class="price">Rp25.000</div>
-                    <p class="price-desc">Large Size<br>Porsi ekstra puas untuk teman kerja.</p>
+                    <p class="price-desc">Large Size<br>Porsi ekstra puas untuk aktivitas.</p>
                 </div>
                 <div class="price-card">
                     <div class="size-title">500 ml</div>
                     <div class="price">Rp30.000</div>
-                    <p class="price-desc">Family Size<br>Porsi hemat stok kulkas keluarga.</p>
+                    <p class="price-desc">Family Size<br>Hemat untuk stok kulkas keluarga.</p>
                 </div>
             </div>
 
-            <!-- Storage Guidelines Box -->
             <div class="guidelines">
-                <h3>Petunjuk Konsumsi & Penyimpanan</h3>
+                <h3>Storage Guidelines & Petunjuk Konsumsi</h3>
                 <ul>
                     <li>🥤 Kocok Sebelum Dikonsumsi</li>
                     <li>🧊 Nikmati Dalam Keadaan Dingin</li>
@@ -367,13 +415,23 @@
                     <li>❄️ Max 5 Hari di Chiller</li>
                 </ul>
             </div>
+
+            <div class="partnership">
+                <h3>Peluang Kemitraan & Kerjasama (Reseller / B2B)</h3>
+                <p>Ingin menjadi mitra reseller, memasok kantin sekolah, atau memesan dalam jumlah besar untuk acara keluarga/kantor? Hubungi admin kami untuk penawaran harga khusus.</p>
+                <a href="https://wa.me/6282211681167?text=Halo%20Admin%20MoYoGu,%20saya%20tertarik%20kerjasama/reseller" class="btn-partner" target="_blank">🤝 Kontak Admin untuk Kerjasama</a>
+            </div>
+
+            <div class="location-box">
+                <h4>📍 Dapur Produksi MoYoGu</h4>
+                <p>Perumahan Pesona Darussalam Blok B1 No. 9, Bojonggede, Kabupaten Bogor</p>
+            </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <p>&copy; 2026 <strong>MoYoGu Indonesia</strong>. All Rights Reserved.</p>
-        <p>Official Domain: <a href="https://moyogu.id">moyogu.id</a> | Instagram: <a href="https://instagram.com/moyogu.official" target="_blank">@moyogu.official</a></p>
+        <p>Official Website: <a href="https://moyogu.id">moyogu.id</a> | Instagram: <a href="https://instagram.com/moyogu.official" target="_blank">@moyogu.official</a></p>
     </footer>
 
 </body>
